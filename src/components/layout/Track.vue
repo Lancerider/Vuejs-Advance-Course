@@ -18,7 +18,7 @@
         nav.level
           .level-left
             a.level-item
-              span.icon.is-small  play
+              <font-awesome-icon icon="play" />
 </template>
 
 <script>
