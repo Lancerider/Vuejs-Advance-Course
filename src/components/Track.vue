@@ -1,5 +1,5 @@
 <template lang="pug">
-  .card
+  .card.card-vue
     .card-image
       .figure.image.is-1by1
         img(:src="track.album.images[0].url")
@@ -18,7 +18,7 @@
         nav.level
           .level-left
             a.level-item
-              <font-awesome-icon icon="play" />
+              span.fas.fa-play.fa-2x(@click="selectTrack")
 </template>
 
 <script>
@@ -28,6 +28,19 @@ export default {
       type: Object,
       required: true
     }
+  },
+  methods: {
+    selectTrack() {
+      this.$emit("select", this.track.id);
+    }
   }
 };
 </script>
+<style scoped>
+.card {
+  padding: 5px;
+}
+.card:hover {
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.2);
+}
+</style>
