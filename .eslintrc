@@ -1,0 +1,15 @@
+{
+  "extends": "standard",
+  "rules": {
+    "no-new": 0,
+    "comma-dangle": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["vue", "html"]
+}
